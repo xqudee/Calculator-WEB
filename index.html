@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <meta name="description" content="Calculator">
+    <link rel = "stylesheet" href="css/buttons.css">
+    <link rel = "stylesheet" href="css/global.css">
+    <link rel = "stylesheet" href="css/menu.css">
+    <link rel = "stylesheet" href="css/memory.css">
+    <link rel = "stylesheet" href="css/style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="main_div">
+            <div id="result_div">
+                <div id="result">
+                    <p id="expression_string"></p>
+                    <p id="result_area"></p>
+                </div>
+            </div>
+            <div class="buttons_div">
+                <div class="numbers_div">
+                    <div onclick="calculator.clear()" id="clear" class="funcs"><button class="button">C</button></div>
+                    <div onclick="calculator.factorial()" id="factorial" class="funcs"><button class="button">x!</button></div>
+                    <div onclick="calculator.squareRoot()" id="square_root" class="funcs"><button class="button">√</button></div>
+                    <div onclick="calculator.appendSign()" id="sign" class="funcs"><button class="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-slash-minus" viewBox="0 0 16 16">
+                            <path d="m1.854 14.854 13-13a.5.5 0 0 0-.708-.708l-13 13a.5.5 0 0 0 .708.708ZM4 1a.5.5 0 0 1 .5.5v2h2a.5.5 0 0 1 0 1h-2v2a.5.5 0 0 1-1 0v-2h-2a.5.5 0 0 1 0-1h2v-2A.5.5 0 0 1 4 1Zm5 11a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5A.5.5 0 0 1 9 12Z"/>
+                        </svg>
+                    </button></div>
+                    <div onclick="calculator.appendPercent()" id="percent" class="funcs"><button class="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-percent" viewBox="0 0 16 16">
+                            <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0zM4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                        </svg>
+                    </button></div>
+                    <div onclick="calculator.appendDelete()" id="delete" class="funcs"><button class="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace" viewBox="0 0 16 16">
+                            <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"/>
+                            <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"/>
+                        </svg>
+                    </button></div>
+                    <div onclick="calculator.appendNumber(0)" id="number_0" class="zero"><button class="button">0</button></div>
+                    <div onclick="calculator.appendNumber(1)" id="number_1"><button class="button">1</button></div>
+                    <div onclick="calculator.appendNumber(2)" id="number_2"><button class="button">2</button></div>
+                    <div onclick="calculator.appendNumber(3)" id="number_3"><button class="button">3</button></div>
+                    <div onclick="calculator.appendNumber(4)" id="number_4"><button class="button">4</button></div>
+                    <div onclick="calculator.appendNumber(5)" id="number_5"><button class="button">5</button></div>
+                    <div onclick="calculator.appendNumber(6)" id="number_6"><button class="button">6</button></div>
+                    <div onclick="calculator.appendNumber(7)" id="number_7"><button class="button">7</button></div>
+                    <div onclick="calculator.appendNumber(8)" id="number_8"><button class="button">8</button></div>
+                    <div onclick="calculator.appendNumber(9)" id="number_9"><button class="button">9</button></div>
+                    <div onclick="calculator.appendOperation('+')" id="plus" class="operator"><button class="button">﹢</button></div>
+                    <div onclick="calculator.appendOperation('*')" id="multiply" class="operator"><button class="button">×</button></div>
+                    <div onclick="calculator.appendOperation('/')" id="division" class="operator"><button class="button">÷</button></div>
+                    <div onclick="calculator.appendOperation('-')" id="minus" class="operator"><button class="button">-</button></div>
+                    <div onclick="calculator.appendEqual('=')" id="equal" class="operator"><button class="button">＝</button></div>
+                    <div onclick="calculator.appendPoint()" id="point" class="funcs"><button class="button">.</button></div>
+                    <div onclick="calculator.exponentiation()" id="exp" class="funcs"><button class="button">
+                        <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <text x="5" y="15" font-size="14" fill="white">x</text>
+                            <text x="12" y="7" font-size="8" fill="white">y</text>
+                        </svg>
+                    </button></div>
+                    <div onclick="calculator.exponentiation2()" id="exp2" class="funcs"><button class="button">x²</button></div>
+                    <div onclick="calculator.lg()" id="lg" class="funcs"><button class="button">lg</button></div>
+                    
+                    <div id="showM" class="funcs"><button id="btnM" class="button" disabled>M↓</button></div>
+                    <div onclick="calculator.plusM()" id="plusM" class="funcs"><button class="button">M+</button></div>
+                    <div onclick="calculator.minusM()" id="minusM" class="funcs"><button class="button">M-</button></div>
+                    <div onclick="calculator.MC()" id="MC" class="funcs"><button class="button">MC</button></div>
+                    <div onclick="calculator.MR()" id="MR" class="funcs"><button id="btnMR"  class="button" disabled>MR</button></div>
+                </div>
+
+            </div>
+
+            <div class="menu-container">
+                <div class="menu_list">
+                    <a href="index.html" class="menu_items"><span class="menu_item general">General</span></a>
+                    <hr>
+                    <a href="programmer_mode.html" class="menu_items"><span class="menu_item programmer">Programmer</span></a>
+                    <hr>
+                    <a href="length_mode.html" class="menu_items"><span class="menu_item lenght">Length</span></a>
+                    <hr>
+                    <a href="weight_mode.html" div class="menu_items"><span class="menu_item programmer">Weight</span></a>
+                    <hr>
+                    <a href="area_mode.html" div class="menu_items"><span class="menu_item programmer">Area</span></a>
+                </div>
+            </div>
+            <div id="menu" class="menu_button-div"><button class="menu_button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button></div>
+
+            <div id="memory-div" class="memory-div"> 
+                <div id="output_memory-div">
+                    <p id="memory_area"></p>
+                    <div id="memory-btns">
+                        <div onclick="calculator.plusM()" class="memory_menu"><button class="memory_menu-btn">M+</button></div>
+                        <div onclick="calculator.minusM()" class="memory_menu"><button class="memory_menu-btn">M-</button></div>
+                        <div onclick="calculator.MC()" class="memory_menu"><button class="memory_menu-btn">MC</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/winMemory.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

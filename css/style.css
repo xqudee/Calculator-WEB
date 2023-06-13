@@ -1,0 +1,72 @@
+.numbers_div {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(5, 60px);
+  grid-template-rows: repeat(6, 60px);
+  grid-template-areas:
+    "MC MR plusM minusM showM"
+    "clear exp2 square_root delete division"
+    "exp  number_7 number_8 number_9 multiply_"
+    "factorial number_4 number_5 number_6 minus"
+    "percent number_1 number_2 number_3 plus"
+    "lg sign number_0 point equal";
+}
+
+#number_0 { grid-area: number_0; }
+#number_1 { grid-area: number_1; }
+#number_2 { grid-area: number_2; }
+#number_3 { grid-area: number_3; }
+#number_4 { grid-area: number_4; }
+#number_5 { grid-area: number_5; }
+#number_6 { grid-area: number_6; }
+#number_7 { grid-area: number_7; }
+#number_8 { grid-area: number_8; }
+#number_9 { grid-area: number_9; }
+#plus { grid-area: plus; }
+#minus { grid-area: minus; }
+#division { grid-area: division; }
+#multiply { grid-area: multiply_; }
+#clear { grid-area: clear; }
+#equal { grid-area: equal; }
+#point { grid-area: point; }
+#percent { grid-area: percent; }
+#sign { grid-area: sign; }
+#delete { grid-area: delete; }
+#factorial { grid-area: factorial; }
+#square_root { grid-area: square_root; }
+#exp { grid-area: exp; }
+#exp2 { grid-area: exp2; }
+#lg { grid-area: lg; }
+#ln { grid-area: ln; }
+
+#showM { grid-area: showM; }
+#plusM { grid-area: plusM; }
+#minusM { grid-area: minusM; }
+#MC { grid-area: MC; }
+#MR { grid-area: MR; }
+
+.main_div {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #242931;
+  width: auto;
+  padding: 30px 10px 20px 10px;
+  border-radius: 25px;
+  position: relative;
+}
+/* 
+#expression_string {
+  color: rgb(79, 84, 96);
+  display: block;
+  margin-bottom: 20px;
+} */
+
+/* #result {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */

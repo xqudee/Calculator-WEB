@@ -1,0 +1,41 @@
+.numbers_div_programmer {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(4, 60px);
+  grid-template-rows: repeat(4, 60px);
+  grid-template-areas:
+    "number_7 number_8 number_9 multiply_"
+    "number_4 number_5 number_6 minus"
+    "number_1 number_2 number_3 plus"
+    "clear number_0 delete division";
+}
+
+#number_0 { grid-area: number_0; }
+#number_1 { grid-area: number_1; }
+#number_2 { grid-area: number_2; }
+#number_3 { grid-area: number_3; }
+#number_4 { grid-area: number_4; }
+#number_5 { grid-area: number_5; }
+#number_6 { grid-area: number_6; }
+#number_7 { grid-area: number_7; }
+#number_8 { grid-area: number_8; }
+#number_9 { grid-area: number_9; }
+#plus { grid-area: plus; }
+#minus { grid-area: minus; }
+#division { grid-area: division; }
+#multiply { grid-area: multiply_; }
+#clear { grid-area: clear; }
+#equal { grid-area: equal; }
+#delete { grid-area: delete; }
+
+
+#result_div {
+}
+
+.convert-container {
+  margin-left: 15px;
+  margin-right: 25px;
+  font-size: 70%;
+  width: 85%;
+}
+
