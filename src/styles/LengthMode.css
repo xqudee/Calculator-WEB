@@ -1,0 +1,64 @@
+.convert_menu-container {
+    width: 100%;
+    display: flex;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.convert-div {
+    width: 50%;
+}
+
+.select_menu {
+    display: none;
+    flex-direction: column;
+}
+
+.select {
+    background-color: #00000080;
+    padding: 5px 10px;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    border: 1px solid #000000d3;
+}
+
+.select:hover {
+    cursor: pointer;
+}
+
+.active_menu_len {
+    display: flex;
+    align-items: center;
+}
+
+.output {
+    justify-content: space-between;
+}
+
+.main_convert-div {
+    position: absolute;
+    display: flex;
+    width: 85%;
+    top: 27%;
+}
+
+.convert-div.first {
+    border-right: none;
+}
+
+.convert-div.second {
+    border-left: none;
+}
+
+.select_menu .select {
+    background-color: #000000bf;
+    border-top: none;
+}
+
+.select.first {
+    border-right: none;
+}

@@ -8,10 +8,8 @@ This web application is a calculator and converter of various values developed u
 
 - Adding, subtracting, multiplying and dividing numbers.
 - Working with decimal numbers.
-- Exponentiation, root extraction, calculation of factorials, percentages, logarithms.
 - The ability to perform sequential operations.
 - Clearing the input field and history.
-- Working with memory: storing a number in memory, extracting a number from memory, and clearing memory.
 
 ### Converter:
 

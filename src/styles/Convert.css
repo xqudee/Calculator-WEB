@@ -1,0 +1,11 @@
+
+      
+.convert-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(6rem, auto) repeat(3, 6rem);
+    border-radius: 5rem;
+    justify-items: center;
+    justify-content: center;
+}
+      
