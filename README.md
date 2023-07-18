@@ -8,8 +8,10 @@ This web application is a calculator and converter of various values developed u
 
 - Adding, subtracting, multiplying and dividing numbers.
 - Working with decimal numbers.
+- Exponentiation, root extraction, calculation of factorials, percentages, logarithms.
 - The ability to perform sequential operations.
 - Clearing the input field and history.
+- Working with memory: storing a number in memory, extracting a number from memory, and clearing memory.
 
 ### Converter:
 
@@ -18,5 +20,26 @@ This web application is a calculator and converter of various values developed u
 - Weight conversion: milligrams, grams, kilograms.
 - Area conversion: square millimeters, square santimeters, square meters, square kilometers.
 
-## Resources
-- [jQuery](https://jquery.com/) - JavaScript library for simplifying DOM requests.
+## Technology
+- React: a JavaScript library used to create interactive user interfaces.
+
+## Development Setup
+
+### Prerequisites
+
+- Install [Node.js] which includes [Node Package Manager][npm]
+
+### Setting Up a Project
+
+Create workspace:
+
+```
+npx create-react-app [PROJECT NAME]
+```
+
+Run the application:
+
+```
+cd [PROJECT NAME]
+npm start
+```
